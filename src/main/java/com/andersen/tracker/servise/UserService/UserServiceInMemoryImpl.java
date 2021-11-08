@@ -16,8 +16,8 @@ public class UserServiceInMemoryImpl implements UserService {
         userDao = new UserDao();
     }
 
-    public User save(User user) {
-        return userDao.save(user);
+    public boolean save(User user) {
+        return userDao.save(user) != null;
     }
 
     @Override

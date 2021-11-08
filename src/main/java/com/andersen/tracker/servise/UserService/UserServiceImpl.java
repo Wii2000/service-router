@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User save(User user) {
-        return null;
+    public boolean save(User user) {
+        return true;
     }
 }

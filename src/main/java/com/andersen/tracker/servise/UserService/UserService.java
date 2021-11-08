@@ -8,12 +8,12 @@ import java.util.List;
  * Интерфейс сервиса определяющий основные операции над пользователями
  */
 public interface UserService {
-    //get user by id(chatId)
+    //получить по айди
     User get(long id);
-    //true if user was succcessufully removed
+    //удалить оп айди при успехе возвращать true
     boolean delete(long id);
-    //get all users
+    //получить всех юзеров
     List<User> getAll();
-    //save or update user, return result
-    User save(User user);
+    //сохранить или изменить, отправляет true при успехе
+    boolean save(User user);
 }

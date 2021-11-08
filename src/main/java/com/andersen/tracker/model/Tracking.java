@@ -3,19 +3,24 @@ package com.andersen.tracker.model;
 import java.time.LocalDate;
 
 public class Tracking {
+    //айди трекинга присевается в БД сервис-бухгалтера
     private Integer id;
-    private User user;
+    //айди юзера
+    private long userId;
+    //описание задачи
     private String task;
+    //дата трекинга
     private LocalDate date;
+    //сколько часов затрачено
     private int hoursSpent;
 
-    public Tracking(User user, String task, LocalDate date, int hoursSpent) {
-        this(null, user, task, date, hoursSpent);
+    public Tracking(long userId, String task, LocalDate date, int hoursSpent) {
+        this(null, userId, task, date, hoursSpent);
     }
 
-    public Tracking(Integer id, User user, String task, LocalDate date, int hoursSpent) {
+    public Tracking(Integer id, long userId, String task, LocalDate date, int hoursSpent) {
         this.id = id;
-        this.user = user;
+        this.userId = userId;
         this.task = task;
         this.date = date;
         this.hoursSpent = hoursSpent;
@@ -23,10 +28,6 @@ public class Tracking {
 
     public Integer getId() {
         return id;
-    }
-
-    public User getUser() {
-        return user;
     }
 
     public String getTask() {
@@ -39,5 +40,9 @@ public class Tracking {
 
     public int getHoursSpent() {
         return hoursSpent;
+    }
+
+    public long getUserId() {
+        return userId;
     }
 }
